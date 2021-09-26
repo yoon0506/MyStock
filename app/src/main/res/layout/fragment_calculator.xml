@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightYellow"
+        tools:context=".FragmentCalculator">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/saveBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/save" />
+
+            <TextView
+                android:id="@+id/resultUnitPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:gravity="clip_horizontal"
+                android:text="0"
+                android:layout_above="@+id/name"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:textSize="50sp" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="주식이름"
+                android:textColor="@color/gray"
+                android:textColorHint="@color/lightGray"
+                android:singleLine="true"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/stockTable"
+                android:layout_marginBottom="15dp"
+                android:background="@android:color/transparent"
+                android:textSize="24sp"/>
+
+            <TableLayout
+                android:id="@+id/stockTable"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/lightGray"
+                android:padding="1dp"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_height="200dp"
+                    android:background="@color/lightGray">
+
+                    <EditText
+                        android:id="@+id/curUnitPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_span="2"
+                        android:background="@color/lightYellow"
+                        android:gravity="center"
+                        android:hint="보유단가"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="24sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/lightGray">
+
+                    <EditText
+                        android:id="@+id/curQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_span="2"
+                        android:background="@color/lightYellow"
+                        android:gravity="center"
+                        android:hint="보유수량"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="24sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/lightGray">
+
+                    <EditText
+                        android:id="@+id/preUnitPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_span="2"
+                        android:background="@color/lightYellow"
+                        android:gravity="center"
+                        android:hint="추매단가"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="24sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/lightGray">
+
+                    <EditText
+                        android:id="@+id/preQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_span="2"
+                        android:background="@color/lightYellow"
+                        android:gravity="center"
+                        android:hint="추매수량"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textColor="@color/gray"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="24sp" />
+                </TableRow>
+
+                <TableRow android:background="@color/lightGray">
+
+                    <TextView
+                        android:id="@+id/resetBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/lightBlue"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="초기화"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/calBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/lightPurple"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="계산"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+                </TableRow>
+            </TableLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>
